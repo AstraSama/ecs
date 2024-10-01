@@ -6,9 +6,12 @@ const postSchema = new Schema({
         required: true
     },
     User: {
+        type: Schema.Types.ObjectId,
         ref: 'User',
         required: true
     }
+}, {
+    timestamps: true
 });
 
 const Post = model("Post", postSchema);
