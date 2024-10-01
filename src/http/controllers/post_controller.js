@@ -1,4 +1,4 @@
-import Post from "../../database/models/post_model";
+import Post from "../../database/models/post_model.js";
 
 export const store = async (req, res) => {
     try {
