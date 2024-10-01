@@ -1,13 +1,16 @@
 import express from 'express';
-import userRouter from './routes/userRouter';
-import postRouter from './routes/postRouter';
+import user_router from './routers/user_router.js';
+import post_router from './routers/post_router.js';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 
 app.use(express.json()); // enable JSON parsing
 
-app.use('/users', userRouter); // mount user routes
-app.use('/posts', postRouter); // mount post routes
+app.use('/users', user_router); // mount user routes
+app.use('/posts', post_router); // mount post routes
 
 app.get('/', async (req, res) => {
     try {

@@ -1,4 +1,4 @@
-import User from "../../database/models/user_model";
+import User from "../../database/models/user_model.js";
 
 export const store = async (req, res) => {
     try {
